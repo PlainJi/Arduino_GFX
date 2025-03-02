@@ -108,5 +108,6 @@ void Arduino_NV3041A::tftInit()
 
   _bus->batchOperation(nv3041a_init_operations, sizeof(nv3041a_init_operations));
 
-  invertDisplay(false);
+  //invertDisplay(false);
+  invertDisplay(true);    // 适配ESP32 JC4827W543-C3773（4.3寸）
 }
